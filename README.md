@@ -20,7 +20,20 @@ Empresa de distribución que parte del depósito (nodo 0), visita 12 clientes y 
 | `caso2_tsp.mod` | Modelo AMPL (formulación MTZ) |
 | `caso2_tsp.dat` | Datos AMPL (nodos + matriz de distancias) |
 | `caso2_tsp.run` | Script de ejecución AMPL |
-| `Caso2_Respuestas.txt` | Respuestas a las 11 preguntas del caso |
+| `Caso2_Respuestas.md` | Respuestas a las 11 preguntas del caso (Markdown) |
+| `Caso2_Respuestas.pdf` | Respuestas listas para entregar — **abrir directamente este** |
+
+---
+
+## Respuestas del caso
+
+Las respuestas a las 11 preguntas están en `Caso2_Respuestas.md` (formato Markdown) y ya convertidas en `Caso2_Respuestas.pdf`.
+
+Para abrir el PDF directamente desde la terminal:
+
+```powershell
+start Caso2_Respuestas.pdf
+```
 
 ---
 

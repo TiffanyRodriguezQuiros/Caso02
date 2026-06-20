@@ -1,0 +1,28 @@
+# ============================================================
+# Caso 2 - Script de ejecucion AMPL
+# II-1122 Modelos de Optimizacion Industrial - UCR Sede Alajuela
+# ============================================================
+
+reset;
+
+model caso2_tsp.mod;
+data  caso2_tsp.dat;
+
+# Solver (CBC viene gratis con AMPL Community Edition)
+option solver cbc;
+
+solve;
+
+# --- Resultados ---
+printf "\n=== SOLUCION OPTIMA TSP ===\n";
+printf "Distancia total: %g km\n\n", TotalDistance;
+
+printf "Arcos seleccionados (i -> j, distancia):\n";
+for {i in N, j in N: i <> j and x[i,j] > 0.5}
+    printf "  %3d -> %3d   (%g km)\n", i, j, d[i,j];
+
+printf "\nOrden de visita segun variable u:\n";
+printf "  Deposito (0): posicion 0\n";
+for {k in 1..card(N)-1}
+    for {i in N diff {0}: abs(u[i] - k) < 0.5}
+        printf "  Cliente %3d: posicion %g\n", i, u[i];
