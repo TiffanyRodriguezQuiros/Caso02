@@ -110,3 +110,5 @@ u[i] - u[j] + (n-1)·x[i,j] ≤ n-2   (eliminación de subciclos MTZ)
 | Restricciones MTZ | 156 |
 | **Total variables** | **182** |
 | **Total restricciones** | **182** |
+
+
