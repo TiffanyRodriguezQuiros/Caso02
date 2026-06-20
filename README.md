@@ -20,6 +20,7 @@ Empresa de distribución que parte del depósito (nodo 0), visita 12 clientes y 
 | `caso2_tsp.mod` | Modelo AMPL (formulación MTZ) |
 | `caso2_tsp.dat` | Datos AMPL (nodos + matriz de distancias) |
 | `caso2_tsp.run` | Script de ejecución AMPL |
+| `app.py` | **App web interactiva** – solución, matriz, modelo y preguntas en el navegador |
 | `Caso2_Respuestas.md` | Respuestas a las 11 preguntas del caso (Markdown) |
 | `Caso2_Respuestas.pdf` | Respuestas listas para entregar — **abrir directamente este** |
 
@@ -39,15 +40,23 @@ start Caso2_Respuestas.pdf
 
 ## Cómo ejecutar
 
-### Con Python (recomendado, no requiere instalar nada extra)
+### App web con Streamlit (recomendado)
 
-```bash
+```powershell
+python -m streamlit run app.py
+```
+
+Se abre automáticamente en el navegador en `http://localhost:8501`.
+
+### Solo Python (sin navegador)
+
+```powershell
 python caso2_solver.py
 ```
 
 ### Con AMPL (si está instalado)
 
-```bash
+```powershell
 ampl caso2_tsp.run
 ```
 
@@ -101,4 +110,3 @@ u[i] - u[j] + (n-1)·x[i,j] ≤ n-2   (eliminación de subciclos MTZ)
 | Restricciones MTZ | 156 |
 | **Total variables** | **182** |
 | **Total restricciones** | **182** |
-
